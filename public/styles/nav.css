@@ -1,24 +1,95 @@
+/* nav {
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  background-color: #4056a1;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+nav span {
+  font-family: 'Bungee', sans-serif;
+  font-size: 1.5em;
+  padding-left: 1.5em;
+  padding-bottom: .5em;
+  display: flex;
+}
+
+.nav-right {
+  display: flex;
+  padding-right: 1.5em;
+  flex-direction: column;
+  align-items: center;
+} */
+
+
+
 
 /* styling for the navigation bar */
 nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    height: 120px;
-    width: 100%;
-    font-size: 50px;
-    background-color: #4056A1;
-    color: #FFFFFF;
-    padding: 0 1.5em;
-    align-content: space-evenly;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 0 1.5em;
+  align-content: space-evenly;
+  position: fixed; top: 0;
 }
 
 /* styling for "TWEETER" displayed on the navigation bar */
-nav span {
-    font-family: 'Bungee', sans-serif;
-    align-self: flex-start;
-    margin-bottom: 10px;
+.tweeter {
+  font-family: 'Bungee', sans-serif;
+  font-size: 56px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
 }
 
-/* Styling for "Write a new tweet" section */
+/* styling for the "Write a new tweet" text - broken up */
+.writeNewTweet {
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+  align-self: flex-end;
+  justify-content: flex-end;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+/* styling for the "Write" text */
+.boldText {
+  font-weight: bold;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+/* styling for the "a new tweet" text */
+
+.newTweetText {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+/* styling for the double-down icon */
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.angle-double-down {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: #c70707;
+} 

@@ -13,6 +13,15 @@ html {
 /*
  * Global layout stuff
  */
+
+main {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  background-color: #45002d;
+  background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png"); 
+  color:#d7d5d5;
+}
  
 body {
   color: #545149;
@@ -25,9 +34,12 @@ nav {
   font-family: 'Bungee', sans-serif;
 }
 
-.angle-double-down {
-  font-size: 20px;
-  color: #FFFFFF
+button[type="submit"] {
+  font-family: 'Bungee', sans-serif;
+}
+
+.counter {
+  font-family: 'Bungee', sans-serif;
 }
 
 /*

@@ -1,0 +1,44 @@
+.backgroundHeader {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background-color: #45002d;
+  background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png"); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.mainImage {
+  width: 150px;
+  height: auto;
+  margin-top: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerName h2,
+.headerName h3 {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: row;
+  text-align: center;
+  color: #d7d5d5;
+  margin-top: 10px;
+}
+
+.firstName {
+  display: flex;
+  text-align: left;
+  font-weight: bold;
+  font-size: 28px;
+  margin-right: 5px;
+}
+
+.lastName {
+  font-size: 20px;
+}
