@@ -18,6 +18,7 @@ main {
   width: 100%;
   display: flex;
   align-self: center;
+  justify-content: center;
   background-color: #45002d;
   background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png"); 
   color:#d7d5d5;
