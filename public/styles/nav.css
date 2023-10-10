@@ -1,0 +1,24 @@
+
+/* styling for the navigation bar */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 120px;
+    width: 100%;
+    font-size: 50px;
+    background-color: #4056A1;
+    color: #FFFFFF;
+    padding: 0 1.5em;
+    align-content: space-evenly;
+}
+
+/* styling for "TWEETER" displayed on the navigation bar */
+nav span {
+    font-family: 'Bungee', sans-serif;
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+/* Styling for "Write a new tweet" section */
