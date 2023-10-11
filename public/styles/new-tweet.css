@@ -1,73 +1,53 @@
 
-/* styling the container */
-.container {
+.tweetForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+/* styling the textarea & "What are you humming about?" section */
+#tweetText {
+  display: flex;
+  border: none;
+  outline: 0;
+  background: transparent;
+  border-bottom: 3px solid #535047 ;
+  resize: none;
   width: 100%;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 0 auto;
-  background-color: #45002d;
-  background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png"); 
-  border: 1px solid #ccc;
+  font-weight: bolder;
+  color:  #c99d26;
 }
 
-/* styling the form */
-.composeTweet {
+/* styling for the content under the Tweet Form area */
+div.buttonCount {
+  margin-top: .5em;
+  font-family: 'Bungee', sans-serif;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-}
-
-/* styling the Compose Tweet section */
-.newTweet {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  background-color: #ceb1d2;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* styling the "What are you humming about?" section */
-label {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #555;
-}
-
-/* styling the textarea */
-textarea {
-  width: 100%;
-  padding: 10px;
-  border-bottom-left-radius: 1.5px solid #3d3a3a;
-  border-bottom-right-radius: 1.5px solid #3d3a3a;
-  border-radius: 5px;
-  resize: vertical;
-  font-size: 14px;
-  background-color: #ceb1d2;
-  
 }
 
 /* styling the "Tweet" button */
 button[type="submit"] {
   display: flex;
-  flex-direction: flex-start;
-  align-content: flex-start;
   background-color: #4056A1;
-  color: #fff;
+  color: #FFFFFF;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 10px;
 }
 
+/* styling the character count */
 .counter {
+  display: flex;
   margin-top: 10px;
   color: #3d3a3a;
   font-size: 14px;
+  border: none;
+} 
+/* when the character limit is exceeded */
+.counter.invalid {
+  color: #b03838;
+  font-weight: bolder;
 }

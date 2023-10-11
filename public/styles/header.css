@@ -20,25 +20,7 @@
   justify-content: center;
 }
 
-.headerName h2,
-.headerName h3 {
-  margin: 0;
-  padding: 0;
-  display: inline-flex;
-  flex-direction: row;
-  text-align: center;
-  color: #d7d5d5;
-  margin-top: 10px;
-}
-
-.firstName {
-  display: flex;
-  text-align: left;
-  font-weight: bold;
-  font-size: 28px;
-  margin-right: 5px;
-}
-
-.lastName {
-  font-size: 20px;
+span {
+  font-size: 30px;
+  color: #FFFFFF;
 }
