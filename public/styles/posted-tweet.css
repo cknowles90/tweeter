@@ -2,7 +2,10 @@
   border: 1px solid black;
   border-style: solid;
   margin-bottom: 1em;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tweetBox:hover {
+  box-shadow: 5px 5px 10px #4056a1;
 }
 
 .topBar {

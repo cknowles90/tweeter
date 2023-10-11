@@ -30,8 +30,6 @@ $(document).ready(function() {
       // calls createTweetElement for each tweet
       createTweetElement(tweet);
       
-      // takes return value and appends it to the tweets container
-      // $tweetsContainer.append($tweet);
     }
   };
 
@@ -59,9 +57,25 @@ $(document).ready(function() {
     `;
 
     $(".tweets-container").append($tweet);
-  };
+  }; // End of createTweetElement & renderTweets functions
 
+  // jQuery
+  $(`form`).on('submit', function (event) {
+    event.preventDefault();
 
+    console.log($(this).serialize());
+
+    let url ='';
+   
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: $(this).serialize()
+    })
+  }); 
+   
+  
+  
   renderTweets(tweetData);
 });
 
