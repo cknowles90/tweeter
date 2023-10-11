@@ -2,6 +2,7 @@
   border: 1px solid black;
   border-style: solid;
   margin-bottom: 1em;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .topBar {
@@ -44,7 +45,8 @@
   background: transparent;
   border-bottom: 3px solid #535047 ;
   resize: none;
-  width: 100%;
+  width: 95%;
+  margin-left: 30px;
 }
 
 .bottomBar {
@@ -57,6 +59,7 @@
 .date {
   font-size: 16px;
   margin-top: 5px;
+  padding: 5px;
 }
 
 .rightSide {
@@ -65,4 +68,13 @@
   margin-top: 10px;
   font-size: 15px;
   gap: 5px;
+  padding: 5px;
+}
+
+.rightSide i {
+color: #c99d26;
+}
+
+.rightSide i:hover {
+  color: #bb6905;
 }
