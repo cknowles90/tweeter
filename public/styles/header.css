@@ -20,7 +20,7 @@
   justify-content: center;
 }
 
-span {
+header > span {
   font-size: 30px;
   color: #FFFFFF;
 }

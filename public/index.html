@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/posted-tweet.css" text="text/css"/>
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -58,10 +59,27 @@
           <button class="tweetButton" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
-        </form><br><br>
-      <section class="postedTweet">
-       <img class="thumbnailImage" src="/images/profile-hex.png" alt="thumbnail-profile-picture"/>
-      </section>      
+        </form>
+      </section><br><br>
+
+      <article class="tweetBox">
+        <div class="topBar">
+          <div class="leftSide">
+            <img class="thumbnailImage" src="/images/profile-hex.png" alt="thumbnail-profile-picture"/>
+            <span class="handle" type="text" name="name-tag"><strong> Your </strong></span>
+          </div>
+         <article class="tag" type="text">@yourname</article>
+        </div>
+       <textarea name="tweet" class="messageHere" placeholder="If you have something to say, don't"></textarea>
+       <div class="bottomBar">
+         <div class="rightSide">
+          <i style="color: #c99d26;" class="fa-solid fa-retweet"></i>
+          <i style="color: #c99d26;" class="fa-solid fa-flag" aria-hidden="true"></i>
+          <i style="color: #c99d26;" class="fa-solid fa-heart"></i>
+         </div>
+         <span class="date" name="date-and-icons" type="text">13 Days ago</span>
+        </div>
+      </article>      
     </main>
   </body>
 </html>

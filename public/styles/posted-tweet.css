@@ -1,0 +1,68 @@
+.tweetBox {
+  border: 1px solid black;
+  border-style: solid;
+  margin-bottom: 1em;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  max-height: 100px;
+  margin-bottom: 30px;
+}
+
+.leftSide {
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  margin-left: 10px;
+}
+
+.tag {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 15px;
+}
+
+.thumbnailImage {
+  display: flex;
+  width: 50px;
+  height: 50px;
+}
+
+.handle {
+  display: flex;
+}
+
+.messageHere {
+  display: flex;
+  border: none;
+  outline: 0;
+  background: transparent;
+  border-bottom: 3px solid #535047 ;
+  resize: none;
+  width: 100%;
+}
+
+.bottomBar {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.date {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 15px;
+  gap: 5px;
+}

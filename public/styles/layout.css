@@ -17,16 +17,11 @@ html {
 main {
   width: 90%;
   margin: 0 auto;
-  background-color: inherit;
-  background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png"); 
 }
  
 body {
-  color: #545149;
-  background-color: #f4f1ec;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 24px;
-  z-index: -1;
 }
 
 
