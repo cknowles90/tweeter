@@ -10,7 +10,7 @@
     <!-- Font Styles --> <!-- Bungee (TWEETER) Source-Sans (BODY etc) Font-Awesome (Angle-double-down icon) -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <!-- Images -->
@@ -47,7 +47,6 @@
       <span><strong>Your </strong> Name</span>
     </header>
 
-
       <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="newTweet">
@@ -68,18 +67,24 @@
             <img class="thumbnailImage" src="/images/profile-hex.png" alt="thumbnail-profile-picture"/>
             <span class="handle" type="text" name="name-tag"><strong> Your </strong></span>
           </div>
-         <article class="tag" type="text">@yourname</article>
+          <article class="tag" type="text">@yourname</article>
         </div>
-       <textarea name="tweet" class="messageHere" placeholder="If you have something to say, don't"></textarea>
-       <div class="bottomBar">
-         <div class="rightSide">
-          <i class="fa-solid fa-retweet" aria-hidden="true"></i>
-          <i class="fa-solid fa-flag" aria-hidden="true"></i>
-          <i class="fa-solid fa-heart" aria-hidden="true"></i>
-         </div>
-         <span class="date" name="date-and-icons" type="text">13 Days ago</span>
+        <textarea name="tweet" class="messageHere" placeholder="If you have something to say, don't"></textarea>
+        <div class="bottomBar">
+          <div class="rightSide">
+            <i class="fa-solid fa-retweet" aria-hidden="true"></i>
+            <i class="fa-solid fa-flag" aria-hidden="true"></i>
+            <i class="fa-solid fa-heart" aria-hidden="true"></i>
+          </div>
+          <span class="date" name="date-and-icons" type="text">13 Days ago</span>
         </div>
-      </article>      
+      </article>           
+
+      <section class="tweets-container">
+      </section>
+
     </main>
+    
+
   </body>
 </html>
