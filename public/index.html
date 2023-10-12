@@ -9,9 +9,12 @@
 
     <!-- Font Styles --> <!-- Bungee (TWEETER) Source-Sans (BODY etc) Font-Awesome (Angle-double-down icon) -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- External/Imported Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Images -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
@@ -61,24 +64,7 @@
         </form>
       </section><br><br>
 
-      <article class="tweetBox">
-        <div class="topBar">
-          <div class="leftSide">
-            <img class="thumbnailImage" src="/images/profile-hex.png" alt="thumbnail-profile-picture"/>
-            <span class="handle" type="text" name="name-tag"><strong> Your </strong></span>
-          </div>
-          <article class="tag" type="text">@yourname</article>
-        </div>
-        <textarea name="tweet" class="messageHere" placeholder="If you have something to say, don't"></textarea>
-        <div class="bottomBar">
-          <div class="rightSide">
-            <i class="fa-solid fa-retweet" aria-hidden="true"></i>
-            <i class="fa-solid fa-flag" aria-hidden="true"></i>
-            <i class="fa-solid fa-heart" aria-hidden="true"></i>
-          </div>
-          <span class="date" name="date-and-icons" type="text">13 Days ago</span>
-        </div>
-      </article>           
+          
 
       <section class="tweets-container">
       </section>

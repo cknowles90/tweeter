@@ -8,15 +8,15 @@ $(document).ready(function() {
 
   const tweetData =[ 
     {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
+    // "user": {
+    //   "name": "Newton",
+    //   "avatars": "https://i.imgur.com/73hZDYK.png",
+    //   "handle": "@SirIsaac"
+    // },
+    // "content": {
+    //   "text": "If I have seen further it is by standing on the shoulders of giants"
+    // },
+    // "created_at": 1461116232227
   }]
 
   const renderTweets = function(tweets) {
@@ -25,7 +25,7 @@ $(document).ready(function() {
     console.log(tweets);
     // loops through tweets
 
-    for (const tweet of tweets) {
+    for (let tweet of tweets) {
       console.log('tweet', tweet)
       // calls createTweetElement for each tweet
       createTweetElement(tweet);
@@ -51,7 +51,7 @@ $(document).ready(function() {
             <i class="fa-solid fa-flag" aria-hidden="true"></i>
             <i class="fa-solid fa-heart" aria-hidden="true"></i>
           </div>
-          <span class="date" name="date-and-icons" type="text">"${tweetData.created_at}"</span>
+          <span class="date" name="date-and-icons" type="text">"${timeago.format(tweetData.created_at)}"</span>
         </div>
       </article>      
     `;
@@ -59,23 +59,45 @@ $(document).ready(function() {
     $(".tweets-container").append($tweet);
   }; // End of createTweetElement & renderTweets functions
 
-  // jQuery
+  // jQuery //
+  // load the tweets from the server to the client side 
+  function loadTweets () { 
+    $.ajax({
+      type: "GET",
+      url: '/tweets',
+      dataType: 'json',
+      success: function(tweets) {
+        console.log('Tweet sent successfully:', tweets);
+        renderTweets(tweets);
+      },
+      error: function(error) {x
+        console.error('Tweet could not be sent at this time:', error);
+      }
+    });
+  }
+
+  // form submission using jQuery
   $(`form`).on('submit', function (event) {
     event.preventDefault();
-
     console.log($(this).serialize());
-
-    let url ='';
-   
+    
     $.ajax({
       type: "POST",
-      url: url,
-      data: $(this).serialize()
-    })
+      url: '/tweets',
+      data: $(this).serialize(), 
+      success: function() {
+        loadTweets();
+      },
+      error: function(error) {
+        console.error('Tweet could not be sent at this time:', error);
+      }
+    });
   }); 
-   
-  
-  
-  renderTweets(tweetData);
+
+
+
+
+
+  loadTweets();
 });
 
