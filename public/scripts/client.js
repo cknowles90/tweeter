@@ -43,7 +43,7 @@ $(document).ready(function() {
         </div>
         <article class="tag" type="text">"${tweetData.user.handle}"</article>
         </div>
-        <textarea name="tweet" class="messageHere" placeholder="${tweetData.content.text}"></textarea>
+        <textarea name="tweet" class="messageHere" placeholder="${escape(tweetData.content.text)}"></textarea>
         <div class="bottomBar">
           <div class="rightSide">
             <i class="fa-solid fa-retweet" aria-hidden="true"></i>
@@ -57,6 +57,13 @@ $(document).ready(function() {
 
     $(".tweets-container").append($tweet);
   }; // End of createTweetElement & renderTweets functions
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
 
   // jQuery //
   // load the tweets from the server to the client side 
@@ -75,19 +82,15 @@ $(document).ready(function() {
     });
   }
 
-  function alertMessage(message) {
-    alert(message);
-  }
-
   // form submission using jQuery
   $(`form`).on('submit', function (event) {
     event.preventDefault();
     console.log($(this).serialize());
 
     if (!$("#tweetText").val()) {
-      alertMessage("Cannot send Empty Tweets...");
+      alert("Cannot send Empty Tweets...");
     } else if ($("#tweetText").val().length > 140) {
-      alertMessage("Tweet's too long, no one will read it...");
+      alert("Tweet's too long, no one will read it...");
     } else {
 
       $.ajax({
