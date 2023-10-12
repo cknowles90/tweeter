@@ -82,15 +82,25 @@ $(document).ready(function() {
     });
   }
 
+  function showErrorMessage (message) {
+    const errorMessage = $('.errorMessage');
+    errorMessage.text(message); 
+  }
+
+  function hideErrorMessage () {
+    const errorMessage = $('.errorMessage');
+  }
+
   // form submission using jQuery
   $(`form`).on('submit', function (event) {
     event.preventDefault();
-    console.log($(this).serialize());
+
+    hideErrorMessage();
 
     if (!$("#tweetText").val()) {
-      alert("Cannot send Empty Tweets...");
+      showErrorMessage("Cannot send Empty Tweets...");
     } else if ($("#tweetText").val().length > 140) {
-      alert("Tweet's too long, no one will read it...");
+      showErrorMessage("Tweet's too long, no one will read it...");
     } else {
 
       $.ajax({
