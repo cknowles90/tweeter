@@ -82,17 +82,17 @@ $(document).ready(function() {
     });
   }
 
-  // function showErrorMessage (message) {
-  //   const errorMessage = $('#errorMessage');
-  //   errorMessage.empty();
-  //   errorMessage.append(message); 
-  //   errorMessage.slideDown();
-  // }
+  function showErrorMessage (message) {
+    const errorMessage = $('#errorMessage');
+    errorMessage.empty();
+    errorMessage.append(message); 
+    errorMessage.slideDown();
+  }
 
-  // function hideErrorMessage () {
-  //   const errorMessage = $('#errorMessage');
-  //   errorMessage.slideUp();
-  // }
+  function hideErrorMessage () {
+    const errorMessage = $('#errorMessage');
+    errorMessage.slideUp();
+  }
 
   // form submission using jQuery
   $(`form`).on('submit', function (event) {

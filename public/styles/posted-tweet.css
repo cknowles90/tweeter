@@ -86,3 +86,7 @@
 .rightSide i:hover {
   color: #c99d26;
 }
+
+.rightSide i:focus-visible {
+  color: #c99d26;
+}
