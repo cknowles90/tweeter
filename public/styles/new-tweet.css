@@ -1,9 +1,14 @@
+.container {
+  padding: 0;
+  width: 90%;
+  height: 100%;
+}
 
 .tweetForm {
   display: flex;
   flex-direction: column;
   margin-top: 1em;
-
+  margin-bottom: 75px;
 }
 
 /* styling the textarea & "What are you humming about?" section */
@@ -12,10 +17,11 @@
   border: none;
   outline: 0;
   background: transparent;
-  border-bottom: 3px solid #545149 ;
+  border-bottom: 3px solid #c99d26;
   resize: none;
   width: 100%;
-  font-weight: bolder;
+  font-weight: bold;
+  font-size: 15px;
   color:  #c99d26;
 }
 
@@ -28,7 +34,8 @@ div.buttonCount {
 }
 
 /* styling the "Tweet" button */
-button[type="submit"] {
+
+.tweetButton {
   display: flex;
   background-color: #4056A1;
   color: #FFFFFF;
@@ -37,6 +44,10 @@ button[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+}
+
+.tweetButton:hover {
+  background-color:  #c99d26;
 }
 
 /* styling the character count */

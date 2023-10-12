@@ -36,7 +36,7 @@
   <body>
     <nav>
       <span>Tweeter</span>
-      <div>
+        <div>
         <span><strong>Write</strong> a new tweet </span>
         <i style="color: crimson;" class="fas fa-angle-double-down" aria-hidden="true"></i>
         </div>
@@ -54,17 +54,14 @@
     <main class="container">
       <section class="newTweet">
         <form class="tweetForm" action="/tweets" method="POST">
-        <label>What are you humming about?</label>
       </section>
-      <textarea name="text" id="tweetText"></textarea>
+      <textarea name="text" id="tweetText" placeholder="What are you humming about?"></textarea>
         <div class="buttonCount">
           <button class="tweetButton" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
         </form>
-      </section><br><br>
-
-          
+      </section><br><br>    
 
       <section class="tweets-container">
       </section>

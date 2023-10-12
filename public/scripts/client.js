@@ -6,27 +6,26 @@
 
 $(document).ready(function() {
 
-  const tweetData =[ 
-    {
-    // "user": {
-    //   "name": "Newton",
-    //   "avatars": "https://i.imgur.com/73hZDYK.png",
-    //   "handle": "@SirIsaac"
-    // },
-    // "content": {
-    //   "text": "If I have seen further it is by standing on the shoulders of giants"
-    // },
-    // "created_at": 1461116232227
-  }]
+  // const tweetData =[ 
+  //   {
+  //   // "user": {
+  //   //   "name": "Newton",
+  //   //   "avatars": "https://i.imgur.com/73hZDYK.png",
+  //   //   "handle": "@SirIsaac"
+  //   // },
+  //   // "content": {
+  //   //   "text": "If I have seen further it is by standing on the shoulders of giants"
+  //   // },
+  //   // "created_at": 1461116232227
+  // }]
 
   const renderTweets = function(tweets) {
-    // get the tweets container element
-
-    console.log(tweets);
+    // reverse the tweets order so NEWEST is on top
+    tweets.reverse(); 
+    
     // loops through tweets
-
     for (let tweet of tweets) {
-      console.log('tweet', tweet)
+
       // calls createTweetElement for each tweet
       createTweetElement(tweet);
       
@@ -76,22 +75,34 @@ $(document).ready(function() {
     });
   }
 
+  function alertMessage(message) {
+    alert(message);
+  }
+
   // form submission using jQuery
   $(`form`).on('submit', function (event) {
     event.preventDefault();
     console.log($(this).serialize());
-    
-    $.ajax({
-      type: "POST",
-      url: '/tweets',
-      data: $(this).serialize(), 
-      success: function() {
-        loadTweets();
-      },
-      error: function(error) {
-        console.error('Tweet could not be sent at this time:', error);
-      }
-    });
+
+    if (!$("#tweetText").val()) {
+      alertMessage("Cannot send Empty Tweets...");
+    } else if ($("#tweetText").val().length > 140) {
+      alertMessage("Tweet's too long, no one will read it...");
+    } else {
+
+      $.ajax({
+        type: "POST",
+        url: '/tweets',
+        data: $(this).serialize(), 
+        success: function() {
+          $("#tweetText").val("");
+          loadTweets();
+        },
+        error: function(error) {
+          console.error('Tweet could not be sent at this time:', error);
+        }
+      });
+    }
   }); 
 
 

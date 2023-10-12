@@ -8,17 +8,24 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 1.5em;
-  
 }
 
 nav > span {
   font-family: Bungee, sans-serif;
+  margin-top: 40px;
+  font-size: 70px;
+}
+
+nav > div > .span {
+  size: 50px;
 }
 
 nav > div {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 75px;
+  margin-right: 10px;
 }
 
 
