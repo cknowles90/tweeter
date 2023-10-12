@@ -82,25 +82,31 @@ $(document).ready(function() {
     });
   }
 
-  function showErrorMessage (message) {
-    const errorMessage = $('.errorMessage');
-    errorMessage.text(message); 
-  }
+  // function showErrorMessage (message) {
+  //   const errorMessage = $('#errorMessage');
+  //   errorMessage.empty();
+  //   errorMessage.append(message); 
+  //   errorMessage.slideDown();
+  // }
 
-  function hideErrorMessage () {
-    const errorMessage = $('.errorMessage');
-  }
+  // function hideErrorMessage () {
+  //   const errorMessage = $('#errorMessage');
+  //   errorMessage.slideUp();
+  // }
 
   // form submission using jQuery
   $(`form`).on('submit', function (event) {
     event.preventDefault();
 
-    hideErrorMessage();
+    // hideErrorMessage();
+
+    $("#errorMessage").hide()
+    $("#errorMessage").empty()
 
     if (!$("#tweetText").val()) {
-      showErrorMessage("Cannot send Empty Tweets...");
+      $("#errorMessage").append('You cannot post an empty tweet').show()
     } else if ($("#tweetText").val().length > 140) {
-      showErrorMessage("Tweet's too long, no one will read it...");
+      $("#errorMessage").append('Oops, your tweet cannot exceed 140 characters').show()
     } else {
 
       $.ajax({
@@ -112,7 +118,7 @@ $(document).ready(function() {
           loadTweets();
         },
         error: function(error) {
-          console.error('Tweet could not be sent at this time:', error);
+          console.error('Tweet failed to send:', error);
         }
       });
     }

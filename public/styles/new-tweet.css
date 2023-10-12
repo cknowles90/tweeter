@@ -4,21 +4,25 @@
   height: 100%;
 }
 
-.newTweet .errorMessage {
-  display: none;
+#errorMessage {
   background-color: #b03838;
-  color: #FFFFFF;
+  color:#FFFFFF;
+  padding: 5px;
+  border: 1px solid #b03838;
+  border-radius: 7px;
+  margin: 10px auto;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .tweetForm {
   display: flex;
+  position: relative;
   flex-direction: column;
   margin-top: 1em;
   margin-bottom: 75px;
-  padding: 10px;
-  border: 1px solid #b03838;
-  border-radius: 5px;
-  margin-top: 15px;
 }
 
 /* styling the textarea & "What are you humming about?" section */
