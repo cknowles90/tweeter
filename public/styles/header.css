@@ -1,31 +1,21 @@
-.backgroundHeader {
+
+.logo {
   position: relative;
-  height: 400px;
+  height: 500px;
   width: 100%;
-  background-color: #45002d;
-  background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png"); 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-}
-
-.mainImage {
-  width: 150px;
-  height: auto;
-  margin-top: 135px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-header > span {
-  padding-top: 10px;
   font-size: 30px;
-  color: #FFFFFF;
+  color: hsl(0, 0%, 100%);
+  padding-top: 150px;
+  padding-right: 20px;
 }
-
-@media only screen and (min-width: 1024px) {
-  
+.background {
+  background-color: #45002d;
+  background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png"); 
+}
+.userName {
+  padding-bottom: 100px;
 }

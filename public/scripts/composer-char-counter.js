@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-  console.log("DOM has loaded");
-
   $('#tweetText').on('input', function ()  {
 
     const inputText = $(this).val().length;

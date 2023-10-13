@@ -87,6 +87,7 @@
   color: #c99d26;
 }
 
-.rightSide i:focus-visible {
+.rightSide i:active {
   color: #c99d26;
 }
+

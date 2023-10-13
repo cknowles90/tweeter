@@ -1,23 +1,4 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
-*/
-
 $(document).ready(function() {
-
-  // const tweetData =[ 
-  //   {
-  //   // "user": {
-  //   //   "name": "Newton",
-  //   //   "avatars": "https://i.imgur.com/73hZDYK.png",
-  //   //   "handle": "@SirIsaac"
-  //   // },
-  //   // "content": {
-  //   //   "text": "If I have seen further it is by standing on the shoulders of giants"
-  //   // },
-  //   // "created_at": 1461116232227
-  // }]
 
   const renderTweets = function(tweets) {
     // reverse the tweets order so NEWEST is on top
@@ -43,7 +24,7 @@ $(document).ready(function() {
         </div>
         <article class="tag" type="text">"${tweetData.user.handle}"</article>
         </div>
-        <textarea name="tweet" class="messageHere" placeholder="${escape(tweetData.content.text)}"></textarea>
+        <div name="tweet" class="messageHere">${escape(tweetData.content.text)}</div>
         <div class="bottomBar">
           <div class="rightSide">
             <i class="fa-solid fa-retweet" aria-hidden="true"></i>
@@ -64,7 +45,6 @@ $(document).ready(function() {
     return div.innerHTML;
   };
 
-
   // jQuery //
   // load the tweets from the server to the client side 
   function loadTweets () { 
@@ -81,32 +61,17 @@ $(document).ready(function() {
       }
     });
   }
-
-  function showErrorMessage (message) {
-    const errorMessage = $('#errorMessage');
-    errorMessage.empty();
-    errorMessage.append(message); 
-    errorMessage.slideDown();
-  }
-
-  function hideErrorMessage () {
-    const errorMessage = $('#errorMessage');
-    errorMessage.slideUp();
-  }
-
   // form submission using jQuery
   $(`form`).on('submit', function (event) {
     event.preventDefault();
 
-    // hideErrorMessage();
-
-    $("#errorMessage").hide()
-    $("#errorMessage").empty()
+    $("#errorMessage").hide();
+    $("#errorMessage").empty();
 
     if (!$("#tweetText").val()) {
-      $("#errorMessage").append('You cannot post an empty tweet').show()
+      $("#errorMessage").append('<i class="fa-solid fa-triangle-exclamation"></i> You cannot post an empty tweet <i class="fa-solid fa-triangle-exclamation"></i>').show();
     } else if ($("#tweetText").val().length > 140) {
-      $("#errorMessage").append('Oops, your tweet cannot exceed 140 characters').show()
+      $("#errorMessage").append('Oops, your tweet cannot exceed 140 characters').show();
     } else {
 
       $.ajax({
@@ -123,10 +88,6 @@ $(document).ready(function() {
       });
     }
   }); 
-
-
-
-
 
   loadTweets();
 });

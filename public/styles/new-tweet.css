@@ -1,4 +1,4 @@
-.container {
+.newTweet {
   padding: 0;
   width: 90%;
   height: 100%;
@@ -14,6 +14,7 @@
   text-align: center;
   position: absolute;
   left: 50%;
+  bottom: 70%;
   transform: translate(-50%, -50%);
 }
 
@@ -21,8 +22,9 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  margin-top: 1em;
+  margin-top: 10em;
   margin-bottom: 75px;
+  padding-right: 5px;
 }
 
 /* styling the textarea & "What are you humming about?" section */
@@ -35,8 +37,8 @@
   resize: none;
   width: 100%;
   font-weight: bold;
-  font-size: 15px;
-  color:  #c99d26;
+  font-size: 25px;
+  color:  #423206;
 }
 
 /* styling for the content under the Tweet Form area */
@@ -69,7 +71,7 @@ div.buttonCount {
   display: flex;
   margin-top: 10px;
   color: #3d3a3a;
-  font-size: 14px;
+  font-size: 16px;
   border: none;
 } 
 /* when the character limit is exceeded */

@@ -34,40 +34,45 @@
   </head>
 
   <body>
-    <nav>
+    <nav id="nav">
       <span>Tweeter</span>
         <div>
-        <span><strong>Write</strong> a new tweet </span>
-        <i style="color: crimson;" class="fas fa-angle-double-down" aria-hidden="true"></i>
+            <span><strong>Write</strong> a new tweet </span>
+            <i style="color: crimson;" class="fas fa-angle-double-down fa-bounce" aria-hidden="true"></i>
         </div>
     </nav>
 
-    <!-- first page's header -->
-    <header class="backgroundHeader">
-      <div>
-        <img class="mainImage" src="/images/profile-hex.png" alt="profile-picture"/>
+    <container class="body-container">
+      <div class="sub-container">
+        <header class="background">
+          <div class="logo">
+            <img class="mainImage" src="/images/profile-hex.png" alt="profile-picture"/><br>
+            <span class="userName"><strong>Your </strong> Name</span>
+          </div>
+        </header>
       </div>
-      <span><strong>Your </strong> Name</span>
-    </header>
 
-      <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="newTweet">
-        <form class="tweetForm" action="/tweets" method="POST">
-          <span id="errorMessage" style="display: none"></span>
-        </section>
-        <textarea name="text" id="tweetText" placeholder="What are you humming about?"></textarea>
-        <div class="buttonCount">
-          <button class="tweetButton" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweetText">140</output>
-        </div>
-      </form>
-      </section><br><br>    
+      <div class="sub-container">
+        <main class="container">
+          <section class="newTweet">
+            <form class="tweetForm" action="/tweets" method="POST">
+              <span id="errorMessage" style="display: none"></span>
+              <textarea name="text" id="tweetText" placeholder="What are you humming about?"></textarea>
+              <div class="buttonCount">
+                <button class="tweetButton" type="submit">Tweet</button>
+                <output name="counter" class="counter" for="tweetText">140</output>
+              </div>
+            </form>
+          </section>
+          <br>
+          <br>    
 
-      <section class="tweets-container">
-      </section>
+          <section class="tweets-container">
+          </section>
 
-    </main>
+        </main>
+      </div>
+    </container>
 
   </body>
 </html>

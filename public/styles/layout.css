@@ -3,6 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
 }
@@ -23,6 +24,34 @@ body {
   font-family: 'Source Sans 3', sans-serif;
 }
 
+@media only screen and (min-width: 1024px) {
+  .body-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sub-container {
+    width: 100%;
+  }
+
+  .background {
+    top: 210px;
+    left: 110px;
+    position: sticky;
+    display: flex;
+    width: 70%;
+  }
+
+  .tweets-container {
+    padding-right: 70px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #nav {
+    display: none;
+  }
+}
 
 
 
