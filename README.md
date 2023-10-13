@@ -49,7 +49,12 @@ Thank-you kindly for your time and attention, I hope you enjoy TWEETER as much a
 
 ## Screenshots *(See it in all it's beauty/glory...)*
 
-
+!["Screenshot depicting the page in all it's glory on a Desktop screen"](https://github.com/cknowles90/tweeter/blob/master/docs/desktop-view.png?raw=true)
+!["Screenshot depicting the page in all it's glory on a Smartphone screen"](https://github.com/cknowles90/tweeter/blob/master/docs/smartphone-view.png?raw=true)
+!["Screenshot depicting the 'Tweet size exceeded' alert message & negative character animation"](https://github.com/cknowles90/tweeter/blob/master/docs/too-many-characters.png?raw=true)
+!["Screenshot depicting the 'Empty Tweet' alert message"](https://github.com/cknowles90/tweeter/blob/master/docs/empty-tweet-alert.png?raw=true)
+!["Screenshot showing the 'your attention is here' style animations on posted Tweets in the feed - shadowing & 'Like button' highlighted"](https://github.com/cknowles90/tweeter/blob/master/docs/shadowing-and-highlighting.png?raw=true)
+!["Screenshot showing the Tweet box as it updates with the users input"](https://github.com/cknowles90/tweeter/blob/master/docs/penny-for-your-thoughts.png?raw=true)
 
 
 ## Getting Started
