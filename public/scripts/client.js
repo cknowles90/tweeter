@@ -69,9 +69,9 @@ $(document).ready(function() {
     $("#errorMessage").empty();
 
     if (!$("#tweetText").val()) {
-      $("#errorMessage").append('<i class="fa-solid fa-triangle-exclamation"></i> You cannot post an empty tweet <i class="fa-solid fa-triangle-exclamation"></i>').show();
+      $("#errorMessage").append('<i class="fa-solid fa-triangle-exclamation"></i>  You cannot post an empty tweet').show();
     } else if ($("#tweetText").val().length > 140) {
-      $("#errorMessage").append('Oops, your tweet cannot exceed 140 characters').show();
+      $("#errorMessage").append('Oops, your tweet cannot exceed 140 characters  <i class="fa-solid fa-triangle-exclamation"></i>').show();
     } else {
 
       $.ajax({

@@ -1,7 +1,7 @@
 
 .logo {
   position: relative;
-  height: 500px;
+  height: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,8 +9,8 @@
   justify-content: center;
   font-size: 30px;
   color: hsl(0, 0%, 100%);
-  padding-top: 150px;
-  padding-right: 20px;
+  padding-top: 120px;
+  padding-right: 12px;
 }
 .background {
   background-color: #45002d;
