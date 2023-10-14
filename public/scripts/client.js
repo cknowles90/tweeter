@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   const renderTweets = function(tweets) {
     // reverse the tweets order so NEWEST is on top
-    tweets.reverse(); 
+    // tweets.reverse(); 
     
     // loops through tweets
     for (let tweet of tweets) {
@@ -36,7 +36,7 @@ $(document).ready(function() {
       </article>      
     `;
 
-    $(".tweets-container").append($tweet);
+    $(".tweets-container").prepend($tweet);
   }; // End of createTweetElement & renderTweets functions
 
   const escape = function (str) {
@@ -52,6 +52,7 @@ $(document).ready(function() {
       type: "GET",
       url: '/tweets',
       dataType: 'json',
+      cache: false,
       success: function(tweets) {
         console.log('Tweet sent successfully:', tweets);
         renderTweets(tweets);
@@ -65,12 +66,15 @@ $(document).ready(function() {
   $(`form`).on('submit', function (event) {
     event.preventDefault();
 
-    $("#errorMessage").hide();
     $("#errorMessage").empty();
+    $("#errorMessage").hide();
+    $(".counter").text(140);
 
-    if (!$("#tweetText").val()) {
+    const tweetText = $("#tweetText").val().trim();
+
+    if (!tweetText) {
       $("#errorMessage").append('<i class="fa-solid fa-triangle-exclamation"></i>  You cannot post an empty tweet').show();
-    } else if ($("#tweetText").val().length > 140) {
+    } else if (tweetText.length > 140) {
       $("#errorMessage").append('Oops, your tweet cannot exceed 140 characters  <i class="fa-solid fa-triangle-exclamation"></i>').show();
     } else {
 
@@ -79,6 +83,7 @@ $(document).ready(function() {
         url: '/tweets',
         data: $(this).serialize(), 
         success: function() {
+          $(".counter").text(140);
           $("#tweetText").val("");
           loadTweets();
         },
@@ -87,6 +92,9 @@ $(document).ready(function() {
         }
       });
     }
+    $("#tweetText").on('input', function() {
+      $("#errorMessage").empty().hide();
+    })
   }); 
 
   loadTweets();

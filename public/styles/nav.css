@@ -1,6 +1,7 @@
 nav {
   height: 120px;
   width: 100%;
+  position: fixed;
   background-color: #4056a1;
   color: #FFFFFF;
   display: flex;
@@ -12,7 +13,7 @@ nav {
 nav > span {
   font-family: Bungee, sans-serif;
   margin-top: 40px;
-  font-size: 80px;
+  font-size: 70px;
   margin-left: 20px;
 }
 
@@ -25,5 +26,4 @@ nav > div {
   flex-direction: column;
   text-align: center;
   margin-top: 60px;
-  margin-right: 40px;
 }
