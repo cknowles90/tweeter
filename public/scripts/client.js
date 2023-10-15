@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
   const renderTweets = function(tweets) {
+    // clear exisiting tweets in the container to AVOID DUPLICATES
+    $(".tweets-container").empty();
+    
     // reverse the tweets order so NEWEST is on top
     // tweets.reverse(); 
     
